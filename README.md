@@ -17,6 +17,7 @@ Registration by default gives user role
 * Can check the all info about **Bought cars**, **Cars In Rent** and **Returned Cars**
 * Can check the list of all cars with status
 
+<hr>
 
 **Registered users**
 
@@ -52,11 +53,11 @@ Registration by default gives user role
 ## Screenshots
 
 <img src="https://i.imgur.com/EJ35i0u.png" /><br/>
-<hr/>
+
 <img src="https://i.imgur.com/2r5bsrW.png" /><br/>
-<hr/>
+
 <img src="https://i.imgur.com/YLl1QbD.png" /><br/>
-<hr/>
+
 <img src="https://i.imgur.com/SqNGilw.png" /><br/>
-<hr/>
+
 <img src="https://i.imgur.com/q1DMTtq.png" /><br/>
