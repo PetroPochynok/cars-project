@@ -37,13 +37,13 @@ public class ExceptionController {
         return "no-such-result";
     }
 
-//    @ExceptionHandler(Exception.class)
-//    public String handleGlobalException(Model model, Authentication authentication){
-//        String username = authentication.getName();
-//        User user = (User) userService.loadUserByUsername(username);
-//
-//        model.addAttribute("user", user);
-//
-//        return "global-exception";
-//    }
+    @ExceptionHandler(Exception.class)
+    public String handleGlobalException(Model model, Authentication authentication){
+        String username = authentication.getName();
+        User user = (User) userService.loadUserByUsername(username);
+
+        model.addAttribute("user", user);
+
+        return "global-exception";
+    }
 }
