@@ -98,7 +98,7 @@
         <th>User Id</th>
         <th>Car Id</th>
         <th>Status</th>
-        <th>Data of Rent</th>
+        <th>Date of Rent</th>
         <th>Paid Days</th>
         <th>Action</th>
     </tr>

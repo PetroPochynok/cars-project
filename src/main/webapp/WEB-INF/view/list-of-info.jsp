@@ -98,7 +98,7 @@
             <th>User Id</th>
             <th>Car Id</th>
             <th>Status</th>
-            <th>Data</th>
+            <th>Date</th>
             <th>Action</th>
         </tr>
 
