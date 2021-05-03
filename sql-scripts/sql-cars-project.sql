@@ -1,3 +1,6 @@
+CREATE DATABASE  IF NOT EXISTS `carsprojectdb`;
+USE `carsprojectdb`;
+
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: carsprojectdb
