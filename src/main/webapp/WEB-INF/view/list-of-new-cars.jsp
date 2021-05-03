@@ -88,7 +88,7 @@
 
 
 <div style="margin: 25px auto; text-align: center; width: 22%">
-    <form:form action="/cars/listOfNewCarsOnSaleByPriceRange" method="post">
+    <form:form action="/cars/listOfNewCarsOnSaleByPriceRange" method="get">
         <span class="fs-4">Find new cars by price</span>
         <hr>
         <div class="input-group input-group-sm mb-3">

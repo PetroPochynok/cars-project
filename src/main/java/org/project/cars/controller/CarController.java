@@ -421,7 +421,7 @@ public class CarController {
     }
 
     // Soring New Cars By Price Range
-    @PostMapping("/listOfNewCarsOnSaleByPriceRange")
+    @GetMapping("/listOfNewCarsOnSaleByPriceRange")
     public String listOfNewCarsOnSaleByPriceRange(@RequestParam("min") Integer min, @RequestParam("max") Integer max, Model model, Authentication authentication){
         if(min > max){
             return "redirect:/cars/listOfNewCarsOnSale";
@@ -438,7 +438,7 @@ public class CarController {
     }
 
     // Soring Used Cars By Price Range
-    @PostMapping("/listOfUsedCarsOnSaleByPriceRange")
+    @GetMapping("/listOfUsedCarsOnSaleByPriceRange")
     public String listOfUsedCarsOnSaleByPriceRange(@RequestParam("min") Integer min, @RequestParam("max") Integer max, Model model, Authentication authentication){
         if(min > max){
             return "redirect:/cars/listOfUsedCarsOnSale";
