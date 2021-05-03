@@ -135,7 +135,7 @@
             <th>Last Name</th>
             <th>Email</th>
             <th>Gender</th>
-            <th>Data of Action</th>
+            <th>Date of Action</th>
         </tr>
         </thead>
 
