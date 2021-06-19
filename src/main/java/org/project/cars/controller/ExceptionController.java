@@ -3,6 +3,7 @@ package org.project.cars.controller;
 import org.project.cars.entity.User;
 import org.project.cars.exception.NoSuchResultException;
 import org.project.cars.exception.NotEnoughMoneyException;
+import org.project.cars.exception.UsernameAlreadyExistsException;
 import org.project.cars.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -35,6 +36,11 @@ public class ExceptionController {
         model.addAttribute("user", user);
 
         return "no-such-result";
+    }
+
+    @ExceptionHandler(UsernameAlreadyExistsException.class)
+    public String handleUsernameAlreadyExistsException() {
+        return "login-page-error";
     }
 
     @ExceptionHandler(Exception.class)

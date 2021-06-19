@@ -122,7 +122,7 @@ CREATE TABLE `user` (
   `email` varchar(128) NOT NULL,
   `money` double NOT NULL,
   CONSTRAINT `user_PK` PRIMARY KEY (`id`),
-  CONSTRAINT `user_username_UQ` UNIQUE KEY `username` (`username`)
+  CONSTRAINT `user_username_UQ` UNIQUE KEY (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

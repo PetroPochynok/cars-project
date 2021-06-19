@@ -2,6 +2,7 @@ package org.project.cars.controller;
 
 import org.project.cars.dao.RoleDAO;
 import org.project.cars.entity.User;
+import org.project.cars.exception.UsernameAlreadyExistsException;
 import org.project.cars.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
@@ -11,9 +12,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.Collections;
 
@@ -46,7 +49,7 @@ public class RegistrationController {
     }
 
     @PostMapping("/saveForm")
-    public String saveForm(@Valid @ModelAttribute("user") User user, BindingResult bindingResult){
+    public String saveForm(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model){
 
         if(bindingResult.hasErrors()){
             return "registration-form";
@@ -58,8 +61,14 @@ public class RegistrationController {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.setMoney(0);
 
-            userService.saveUser(user);
-            return "redirect:/cars/listOfNewCarsOnSale";
+            // if username already exists
+            try {
+                userService.saveUser(user);
+                return "redirect:/cars/listOfNewCarsOnSale";
+            } catch (Exception exc){
+                throw new UsernameAlreadyExistsException("Username already exists");
+            }
+
         }
 
     }
