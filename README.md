@@ -1,6 +1,6 @@
 # Description
 This is a Spring MVC project with crud operations and simple logic,
-the main purpose of creating a project was for educational purpose.
+the main reason for creating a project was for educational purpose.
 Project has 2 different roles: **User** and **Admin**
 
 
